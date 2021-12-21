@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: flogo/flogo-docker:latest eula-accept
+  repository: flogo/flogo-docker
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []

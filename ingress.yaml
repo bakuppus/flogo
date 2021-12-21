@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-tls-flogo
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  tls:
+  - secretName: tls-cert
+    hosts:
+    - flogo.kubelancer.net
+  rules:
+  - host: flogo.kubelancer.net
+    http:
+      paths:
+      - backend:
+          serviceName: "flogo-web"
+          servicePort: 3303
+        path: /
+        pathType: ImplementationSpecific
+
