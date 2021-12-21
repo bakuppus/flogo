@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: flogo/flogo-docker
+  repository: kubelancer/flogo
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
