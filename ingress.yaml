@@ -16,8 +16,8 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: "flogo-web"
-          servicePort: 3303
+          serviceName: flogo
+          servicePort: 80
         path: /
         pathType: ImplementationSpecific
 
